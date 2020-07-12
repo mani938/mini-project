@@ -1,0 +1,38 @@
+
+
+{% extends'common.html' %}
+
+{% block pwn %}
+<style>
+    .admin_login
+    {
+        text-align:center;
+</style>
+<form action="http://127.0.0.1:5000/validate_admin" method="post"></form>
+<table align="center" border="0">
+    <tr>
+        <th>
+            <img src="{{url_for('static',filename='images/admin.png')}}">
+        </th>
+        <th style="width: 300px;text align:center;font-family:'aArial';background-color:green;color:white;font-size=15px">
+            Admin login page
+        </th>
+    </tr>
+    <tr>
+        <th class="admin_login">
+            <input type="text" placeholder="username" name="t1">
+        </th>
+    </tr>
+    <tr>
+        <th class="admin_login">
+            <input type="password" placeholder="password" name="t2">
+        </th>
+    </tr>
+     <tr>
+         <th>
+             <button type="submit">login</button>
+         </th>
+     </tr>
+</table>
+
+{% endblock %}
